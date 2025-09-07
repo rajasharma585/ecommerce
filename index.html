@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rilaxtion Mattress – Sleep Better</title>
+  <meta name="description" content="Rilaxtion Mattress – premium mattresses, pillows & bedding. Free shipping, 100‑Night Trial, 10‑Year Warranty."/>
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --brand:#2b6cb0;          /* primary */
+      --brand-2:#0ea5e9;        /* accent */
+      --dark:#0f172a;           /* heading */
+      --muted:#6b7280;          /* text */
+      --cream:#f8fafc;          /* background */
+      --star:#f59e0b;           /* rating */
+    }
+    body{font-family: system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:var(--cream);}
+    .shadow-soft{box-shadow:0 10px 25px rgba(2,8,23,.08);} 
+    .rounded-2xl{border-radius:1.25rem!important;}
+
+    /* Navbar */
+    .navbar-brand{font-weight:800;letter-spacing:.3px;color:var(--dark)!important}
+    .badge-pill{border-radius:999px}
+
+    /* Hero */
+    .hero{background:linear-gradient(135deg, #e0f2fe 0%, #fafafa 50%, #ffffff 100%);} 
+    .hero-img{max-width:600px;border-radius:1.25rem}
+
+    /* Product Cards */
+    .product-card .price{font-size:1.1rem;font-weight:700;color:var(--dark)}
+    .product-card .old{color:#9ca3af;text-decoration:line-through;font-weight:500}
+    .rating i{color:var(--star)}
+    .wishlist{position:absolute;top:.75rem;right:.75rem}
+
+    /* Counters */
+    .counter{font-size:2rem;font-weight:800;color:var(--dark)}
+    .counter-wrap{background:#fff}
+
+    /* Footer */
+    footer a{color:#64748b;text-decoration:none}
+    footer a:hover{color:var(--brand)}
+
+    .toast-container{z-index:1080}
+  </style>
+</head>
+<body>
+
+<!-- Toasts -->
+<div class="toast-container position-fixed top-0 end-0 p-3">
+  <div id="toast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">Item added to cart.</div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-white sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#"><i class="bi bi-moon-stars me-2 text-primary"></i>Rilaxtion <span class="ms-1 text-primary">Mattress</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#shop">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="#why">Why Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <div class="d-flex ms-lg-3">
+        <button class="btn btn-outline-primary me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#cart" aria-controls="cart">
+          <i class="bi bi-bag"></i> <span class="badge bg-primary ms-1" id="cart-count">0</span>
+        </button>
+        <button class="btn btn-primary" type="button">Sign In</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero py-5 py-lg-6">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-6">
+        <span class="badge text-bg-primary badge-pill mb-3">100‑Night Trial • Free Shipping • 10‑Year Warranty</span>
+        <h1 class="display-5 fw-bold text-dark">Sleep better with <span class="text-primary">Rilaxtion</span></h1>
+        <p class="lead text-secondary">Premium memory foam and hybrid mattresses engineered for India’s climate—cooler sleep, superior spine alignment, and plush comfort.</p>
+        <div class="d-flex gap-2">
+          <a href="#shop" class="btn btn-primary btn-lg"><i class="bi bi-bag me-1"></i> Shop Now</a>
+          <a href="#why" class="btn btn-outline-primary btn-lg">Why Rilaxtion?</a>
+        </div>
+        <div class="d-flex align-items-center gap-2 mt-3">
+          <div class="rating" aria-label="rating 4.8">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+          </div>
+          <small class="text-muted">4.8/5 from 3,200+ happy sleepers</small>
+        </div>
+      </div>
+      <div class="col-lg-6 text-center">
+        <img class="img-fluid hero-img shadow-soft" alt="Rilaxtion mattress on a modern bed" src="C:\Users\ACER\Downloads\headingimage.jpg"/>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- USP STRIP -->
+<section id="why" class="py-4">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-6 col-lg-3">
+        <div class="p-3 bg-white rounded-2xl shadow-soft h-100 d-flex align-items-center gap-3"><i class="bi bi-truck fs-3 text-primary"></i> <div><div class="fw-bold">Free & Fast Delivery</div><small class="text-muted">Across major cities</small></div></div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="p-3 bg-white rounded-2xl shadow-soft h-100 d-flex align-items-center gap-3"><i class="bi bi-arrow-repeat fs-3 text-primary"></i> <div><div class="fw-bold">100‑Night Trial</div><small class="text-muted">Easy returns</small></div></div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="p-3 bg-white rounded-2xl shadow-soft h-100 d-flex align-items-center gap-3"><i class="bi bi-shield-check fs-3 text-primary"></i> <div><div class="fw-bold">10‑Year Warranty</div><small class="text-muted">Hassle‑free</small></div></div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="p-3 bg-white rounded-2xl shadow-soft h-100 d-flex align-items-center gap-3"><i class="bi bi-thermometer-sun fs-3 text-primary"></i> <div><div class="fw-bold">Cool Gel Foam</div><small class="text-muted">All‑season comfort</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTERS + PRODUCT GRID -->
+<section id="shop" class="py-5">
+  <div class="container">
+    <div class="d-lg-flex align-items-end justify-content-between gap-3 mb-4">
+      <div>
+        <h2 class="fw-bold mb-1">Best Sellers</h2>
+        <p class="text-muted mb-0">Choose your size, firmness & budget. COD available.</p>
+      </div>
+      <div class="d-flex flex-wrap gap-2">
+        <div class="input-group">
+          <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
+          <input id="search" class="form-control" placeholder="Search products… (e.g., hybrid, queen)"/>
+        </div>
+        <select id="filter-size" class="form-select">
+          <option value="">Size: All</option>
+          <option>Single</option>
+          <option>Queen</option>
+          <option>King</option>
+        </select>
+        <select id="filter-firm" class="form-select">
+          <option value="">Firmness: All</option>
+          <option>Soft</option>
+          <option>Medium</option>
+          <option>Firm</option>
+        </select>
+        <select id="sort" class="form-select">
+          <option value="pop">Sort: Most Popular</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="grid" class="row g-4">
+      <!-- Product Template Cards (data- attributes drive filtering) -->
+      <!-- 1 -->
+      <div class="col-12 col-sm-6 col-lg-4 product" data-size="Queen" data-firm="Medium" data-price="17999">
+        <div class="card product-card h-100 shadow-soft position-relative rounded-2xl">
+          <button class="btn btn-light wishlist shadow-sm" aria-label="Add to wishlist" data-wish><i class="bi bi-heart"></i></button>
+          <img class="card-img-top" alt="Cool Gel Memory Foam Mattress" src="C:\Users\ACER\Downloads\mattress1.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Cool Gel Memory Foam – Queen</h5>
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="price">₹17,999 <span class="old ms-1">₹22,999</span></div>
+              <div class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+            </div>
+            <p class="mt-2 text-muted small">Pressure‑relieving foam with cooling gel for Indian summers.</p>
+            <div class="d-flex gap-2">
+              <button class="btn btn-primary flex-grow-1" data-add='{"id":"m1","name":"Cool Gel Memory Foam – Queen","price":17999,"img":"https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=800&auto=format&fit=crop"}'>Add to Cart</button>
+              <button class="btn btn-outline-secondary" data-quick data-target="#quickModal" data-bs-toggle="modal">Quick View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="col-12 col-sm-6 col-lg-4 product" data-size="King" data-firm="Medium" data-price="25999">
+        <div class="card product-card h-100 shadow-soft position-relative rounded-2xl">
+          <button class="btn btn-light wishlist shadow-sm" aria-label="Add to wishlist" data-wish><i class="bi bi-heart"></i></button>
+          <img class="card-img-top" alt="Hybrid Pocket Spring Mattress" src="C:\Users\ACER\Downloads\mattress2.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Hybrid Pocket Spring – King</h5>
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="price">₹25,999 <span class="old ms-1">₹31,999</span></div>
+              <div class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+            </div>
+            <p class="mt-2 text-muted small">Bounce of springs + comfort of foam. Zero partner disturbance.</p>
+            <div class="d-flex gap-2">
+              <button class="btn btn-primary flex-grow-1" data-add='{"id":"m2","name":"Hybrid Pocket Spring – King","price":25999,"img":"https://images.unsplash.com/photo-1505691723518-36a5ac3b2d52?q=80&w=800&auto=format&fit=crop"}'>Add to Cart</button>
+              <button class="btn btn-outline-secondary" data-quick data-target="#quickModal" data-bs-toggle="modal">Quick View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="col-12 col-sm-6 col-lg-4 product" data-size="Single" data-firm="Firm" data-price="12999">
+        <div class="card product-card h-100 shadow-soft position-relative rounded-2xl">
+          <button class="btn btn-light wishlist shadow-sm" aria-label="Add to wishlist" data-wish><i class="bi bi-heart"></i></button>
+          <img class="card-img-top" alt="Orthopedic Support Mattress" src="C:\Users\ACER\Downloads\mattress3.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Ortho Support – Single</h5>
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="price">₹12,999 <span class="old ms-1">₹16,499</span></div>
+              <div class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></div>
+            </div>
+            <p class="mt-2 text-muted small">Firm orthopedic support recommended by physios.</p>
+            <div class="d-flex gap-2">
+              <button class="btn btn-primary flex-grow-1" data-add='{"id":"m3","name":"Ortho Support – Single","price":12999,"img":"https://images.unsplash.com/photo-1600490036275-35f7fdc5791d?q=80&w=800&auto=format&fit=crop"}'>Add to Cart</button>
+              <button class="btn btn-outline-secondary" data-quick data-target="#quickModal" data-bs-toggle="modal">Quick View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 4 -->
+      <div class="col-12 col-sm-6 col-lg-4 product" data-size="Queen" data-firm="Soft" data-price="19999">
+        <div class="card product-card h-100 shadow-soft position-relative rounded-2xl">
+          <button class="btn btn-light wishlist shadow-sm" aria-label="Add to wishlist" data-wish><i class="bi bi-heart"></i></button>
+          <img class="card-img-top" alt="Cloud Plush Mattress" src="C:\Users\ACER\Downloads\mattress4.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Cloud Plush – Queen</h5>
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="price">₹19,999 <span class="old ms-1">₹24,999</span></div>
+              <div class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+            </div>
+            <p class="mt-2 text-muted small">Ultra‑plush Euro‑top with breathable knit cover.</p>
+            <div class="d-flex gap-2">
+              <button class="btn btn-primary flex-grow-1" data-add='{"id":"m4","name":"Cloud Plush – Queen","price":19999,"img":"https://images.unsplash.com/photo-1496412705862-e0088f16f791?q=80&w=800&auto=format&fit=crop"}'>Add to Cart</button>
+              <button class="btn btn-outline-secondary" data-quick data-target="#quickModal" data-bs-toggle="modal">Quick View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 5 -->
+      <div class="col-12 col-sm-6 col-lg-4 product" data-size="King" data-firm="Firm" data-price="28999">
+        <div class="card product-card h-100 shadow-soft position-relative rounded-2xl">
+          <button class="btn btn-light wishlist shadow-sm" aria-label="Add to wishlist" data-wish><i class="bi bi-heart"></i></button>
+        <img class="card-img-top" alt="Latex Natural Mattress" src="C:\Users\ACER\Downloads\mattress5.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Natural Latex – King</h5>
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="price">₹28,999 <span class="old ms-1">₹34,999</span></div>
+              <div class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+            </div>
+            <p class="mt-2 text-muted small">Eco‑friendly, durable support with natural bounce.</p>
+            <div class="d-flex gap-2">
+              <button class="btn btn-primary flex-grow-1" data-add='{"id":"m5","name":"Natural Latex – King","price":28999,"img":"https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=800&auto=format&fit=crop"}'>Add to Cart</button>
+              <button class="btn btn-outline-secondary" data-quick data-target="#quickModal" data-bs-toggle="modal">Quick View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 6 -->
+      <div class="col-12 col-sm-6 col-lg-4 product" data-size="Single" data-firm="Medium" data-price="9999">
+        <div class="card product-card h-100 shadow-soft position-relative rounded-2xl">
+          <button class="btn btn-light wishlist shadow-sm" aria-label="Add to wishlist" data-wish><i class="bi bi-heart"></i></button>
+          <img class="card-img-top" alt="Budget Foam Mattress" src="C:\Users\ACER\Downloads\mattress2.jpg">
+          <div class="card-body">
+            <h5 class="card-title">Essential Foam – Single</h5>
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="price">₹9,999 <span class="old ms-1">₹12,499</span></div>
+              <div class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i></div>
+            </div>
+            <p class="mt-2 text-muted small">Great value starter mattress with washable cover.</p>
+            <div class="d-flex gap-2">
+              <button class="btn btn-primary flex-grow-1" data-add='{"id":"m6","name":"Essential Foam – Single","price":9999,"img":"https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop"}'>Add to Cart</button>
+              <button class="btn btn-outline-secondary" data-quick data-target="#quickModal" data-bs-toggle="modal">Quick View</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK VIEW MODAL -->
+<div class="modal fade" id="quickModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content rounded-2xl">
+      <div class="modal-header">
+        <h5 class="modal-title">Product Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-6">
+            <img id="q-img" class="img-fluid rounded" alt="Product" src="C:\Users\ACER\Downloads\headingimage1.jpg">
+          </div>
+          <div class="col-md-6">
+            <h4 id="q-title" class="mb-1"></h4>
+            <div class="mb-2"><span id="q-price" class="fw-bold fs-5"></span></div>
+            <p class="text-muted small">Breathable knitted cover • Cool gel memory foam • Anti‑sag support core • Zero partner disturbance • Works on all bed types.</p>
+            <div class="row g-2 mb-3">
+              <div class="col-6">
+                <label class="form-label small">Choose Size</label>
+                <select class="form-select" id="q-size">
+                  <option>Single</option>
+                  <option selected>Queen</option>
+                  <option>King</option>
+                </select>
+              </div>
+              <div class="col-6">
+                <label class="form-label small">Firmness</label>
+                <select class="form-select" id="q-firm">
+                  <option>Soft</option>
+                  <option selected>Medium</option>
+                  <option>Firm</option>
+                </select>
+              </div>
+            </div>
+            <button id="q-add" class="btn btn-primary w-100"><i class="bi bi-bag me-1"></i> Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- REVIEWS -->
+<section id="reviews" class="py-5">
+  <div class="container">
+    <h2 class="fw-bold mb-4 text-center">What our customers say</h2>
+    <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+      <div class="carousel-inner rounded-2xl shadow-soft">
+        <div class="carousel-item active bg-white p-4">
+          <figure class="mb-0">
+            <blockquote class="blockquote">“Finally waking up without back pain. Cooling layer really works in Delhi heat!”</blockquote>
+            <figcaption class="blockquote-footer">Aarav Mehra, New Delhi</figcaption>
+          </figure>
+        </div>
+        <div class="carousel-item bg-white p-4">
+          <figure class="mb-0">
+            <blockquote class="blockquote">“Fast delivery, easy unboxing. Medium feel is perfect for both of us.”</blockquote>
+            <figcaption class="blockquote-footer">Ananya Iyer, Bengaluru</figcaption>
+          </figure>
+        </div>
+        <div class="carousel-item bg-white p-4">
+          <figure class="mb-0">
+            <blockquote class="blockquote">“Value for money. My parents loved the Ortho Support.”</blockquote>
+            <figcaption class="blockquote-footer">Rahul Patil, Pune</figcaption>
+          </figure>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+      <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTERS -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-6 col-lg-3">
+        <div class="counter-wrap p-4 rounded-2xl shadow-soft text-center">
+          <div class="counter" data-target="3200">0</div>
+          <div class="text-muted">5★ Reviews</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="counter-wrap p-4 rounded-2xl shadow-soft text-center">
+          <div class="counter" data-target="15000">0</div>
+          <div class="text-muted">Mattresses Sold</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="counter-wrap p-4 rounded-2xl shadow-soft text-center">
+          <div class="counter" data-target="120">0</div>
+          <div class="text-muted">Cities Covered</div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="counter-wrap p-4 rounded-2xl shadow-soft text-center">
+          <div class="counter" data-target="10">0</div>
+          <div class="text-muted">Years Warranty</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-5">
+  <div class="container">
+    <h2 class="fw-bold mb-4 text-center">FAQ</h2>
+    <div class="accordion rounded-2xl shadow-soft" id="faqAcc">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="f1"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#c1">How does the 100‑Night Trial work?</button></h2>
+        <div id="c1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc"><div class="accordion-body">Try the mattress for 100 nights. If it’s not a match, we’ll pick it up and issue a full refund. T&Cs apply.</div></div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="f2"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c2">Which size should I choose?</button></h2>
+        <div id="c2" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Single (72x36 in), Queen (78x60 in), King (78x72 in). Custom sizes available on request.</div></div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="f3"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c3">Do you offer Cash on Delivery?</button></h2>
+        <div id="c3" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Yes, COD is available in most serviceable pincodes. You can also pay via UPI, cards and netbanking.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER + CONTACT -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="p-4 bg-white rounded-2xl shadow-soft h-100">
+          <h3 class="fw-bold">Stay in the loop</h3>
+          <p class="text-muted">Get sleep tips & exclusive offers in your inbox.</p>
+          <div class="input-group">
+            <input class="form-control" placeholder="Enter your email"/>
+            <button class="btn btn-primary">Subscribe</button>
+          </div>
+          <small class="text-muted d-block mt-2">We respect your privacy. Unsubscribe anytime.</small>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="p-4 bg-white rounded-2xl shadow-soft h-100">
+          <h3 class="fw-bold">Need help?</h3>
+          <p class="text-muted">Call <a href="tel:+919876543210">+91 98 76 543210</a> or WhatsApp us. Mon–Sat, 10am–7pm.</p>
+          <form class="row g-3">
+            <div class="col-md-6"><input class="form-control" placeholder="Your name" required></div>
+            <div class="col-md-6"><input type="email" class="form-control" placeholder="Email" required></div>
+            <div class="col-12"><textarea class="form-control" rows="3" placeholder="Message"></textarea></div>
+            <div class="col-12"><button class="btn btn-outline-primary">Send Message</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFCANVAS CART -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cart" aria-labelledby="cartLabel">
+  <div class="offcanvas-header">
+    <h5 id="cartLabel"><i class="bi bi-bag me-1"></i> Your Cart</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column">
+    <ul id="cart-items" class="list-group mb-3"></ul>
+    <div class="mt-auto">
+      <div class="d-flex justify-content-between fw-bold mb-2">
+        <span>Total</span>
+        <span id="cart-total">₹0</span>
+      </div>
+      <button class="btn btn-primary w-100">Checkout</button>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-white border-top py-4 mt-4">
+  <div class="container">
+    <div class="row g-3 align-items-center">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center gap-2">
+          <i class="bi bi-moon-stars text-primary"></i>
+          <strong>Rilaxtion Mattress</strong>
+        </div>
+        <small class="text-muted">© <span id="year"></span> Rilaxtion Sleep Pvt. Ltd. All rights reserved.</small>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <a href="#" class="me-3">Privacy</a>
+        <a href="#" class="me-3">Terms</a>
+        <a href="#">Refund Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// Helpers
+const fmt = n => '₹' + n.toLocaleString('en-IN');
+const toast = new bootstrap.Toast(document.getElementById('toast'));
+
+// State
+let cart = JSON.parse(localStorage.getItem('rx_cart')||'[]');
+const save = ()=> localStorage.setItem('rx_cart', JSON.stringify(cart));
+
+function renderCart(){
+  const list = document.getElementById('cart-items');
+  list.innerHTML = '';
+  let total = 0;
+  cart.forEach((it, idx)=>{
+    total += it.price * it.qty;
+    const li = document.createElement('li');
+    li.className = 'list-group-item d-flex align-items-center justify-content-between';
+    li.innerHTML = `
+      <div class="d-flex align-items-center gap-3">
+        <img src="${it.img}" alt="${it.name}" width="48" height="48" class="rounded"/>
+        <div>
+          <div class="fw-semibold">${it.name}</div>
+          <small class="text-muted">${fmt(it.price)} × 
+            <button class='btn btn-sm btn-light border ms-1 me-1' data-minus='${idx}'>−</button>
+            <span>${it.qty}</span>
+            <button class='btn btn-sm btn-light border ms-1' data-plus='${idx}'>+</button>
+          </small>
+        </div>
+      </div>
+      <div class="text-end">
+        <div class="fw-bold">${fmt(it.price*it.qty)}</div>
+        <button class="btn btn-sm btn-outline-danger mt-1" data-del='${idx}'><i class="bi bi-trash"></i></button>
+      </div>`;
+    list.appendChild(li);
+  });
+  document.getElementById('cart-total').textContent = fmt(total);
+  document.getElementById('cart-count').textContent = cart.reduce((a,b)=>a+b.qty,0);
+}
+
+function addToCart(item){
+  const ex = cart.find(i=>i.id===item.id);
+  if(ex){ ex.qty += 1; }
+  else { cart.push({...item, qty:1}); }
+  save();
+  renderCart();
+  toast.show();
+}
+
+// Attach Add to Cart
+for(const btn of document.querySelectorAll('[data-add]')){
+  btn.addEventListener('click', e=> addToCart(JSON.parse(btn.getAttribute('data-add'))));
+}
+
+// Wishlist toggle
+for(const w of document.querySelectorAll('[data-wish]')){
+  w.addEventListener('click',()=>{
+    w.classList.toggle('text-danger');
+    w.innerHTML = w.classList.contains('text-danger') ? '<i class="bi bi-heart-fill"></i>' : '<i class="bi bi-heart"></i>'
+  });
+}
+
+// Quick View
+let lastQuick = null;
+for(const q of document.querySelectorAll('[data-quick]')){
+  q.addEventListener('click', (e)=>{
+    const card = e.target.closest('.product-card');
+    const title = card.querySelector('.card-title').textContent;
+    const price = card.closest('.product').dataset.price;
+    const img = card.querySelector('img').src;
+    document.getElementById('q-title').textContent = title;
+    document.getElementById('q-price').textContent = fmt(Number(price));
+    document.getElementById('q-img').src = img;
+    lastQuick = {id: 'q_'+title, name:title, price: Number(price), img};
+  })
+}
+
+document.getElementById('q-add').addEventListener('click', ()=>{
+  if(lastQuick) addToCart(lastQuick);
+});
+
+// Filters & Sorting & Search
+const grid = document.getElementById('grid');
+function applyFilters(){
+  const size = document.getElementById('filter-size').value;
+  const firm = document.getElementById('filter-firm').value;
+  const q = document.getElementById('search').value.toLowerCase();
+  const sort = document.getElementById('sort').value;
+
+  let cards = [...grid.querySelectorAll('.product')];
+  cards.forEach(c=>{
+    const ok = (!size||c.dataset.size===size) && (!firm||c.dataset.firm===firm) && (c.querySelector('.card-title').textContent.toLowerCase().includes(q));
+    c.style.display = ok ? '' : 'none';
+  });
+
+  // sort visible
+  cards = cards.filter(c=>c.style.display!=='none');
+  cards.sort((a,b)=>{
+    const pa = Number(a.dataset.price), pb = Number(b.dataset.price);
+    if(sort==='low') return pa-pb;
+    if(sort==='high') return pb-pa;
+    return 0;
+  }).forEach(c=>grid.appendChild(c));
+}
+['filter-size','filter-firm','search','sort'].forEach(id=>document.getElementById(id).addEventListener('input', applyFilters));
+
+// Counters on view
+const obs = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      const el = entry.target; const target = Number(el.dataset.target);
+      let cur = 0; const step = Math.max(1, Math.floor(target/120));
+      const iv = setInterval(()=>{ cur+=step; if(cur>=target){ cur=target; clearInterval(iv);} el.textContent = cur.toLocaleString('en-IN'); }, 16);
+      obs.unobserve(el);
+    }
+  })
+},{threshold:0.4});
+for(const c of document.querySelectorAll('.counter')) obs.observe(c);
+
+// Cart Events
+const cartList = document.getElementById('cart-items');
+cartList.addEventListener('click',(e)=>{
+  const minus = e.target.closest('[data-minus]');
+  const plus = e.target.closest('[data-plus]');
+  const del = e.target.closest('[data-del]');
+  if(minus){ const i = Number(minus.dataset.minus); cart[i].qty = Math.max(1, cart[i].qty-1); save(); renderCart(); }
+  if(plus){ const i = Number(plus.dataset.plus); cart[i].qty += 1; save(); renderCart(); }
+  if(del){ const i = Number(del.dataset.del); cart.splice(i,1); save(); renderCart(); }
+});
+
+// Init
+renderCart();
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
